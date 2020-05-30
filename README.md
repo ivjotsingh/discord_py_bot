@@ -4,9 +4,7 @@ Discord bot which allow google search through discord without tab switching and 
 
 ## Getting Started
 
-Click on the discord's invite link 
-(ps- the project is not completely open source yet, I'll add the link once it will be)
-for now email me for the invitaion link.
+Email me for the invitation link
 
 Once you joined, you'll be able to do 3 thing:
 
