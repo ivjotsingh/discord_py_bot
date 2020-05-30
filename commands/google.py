@@ -19,7 +19,7 @@ class GoogleCommand:
             # pushing search query to mongo db as log
             post_to_mongo_db({"query": f"{query}"})
 
-            # returning list of dictionary containing description and data
+            # returning list of dictionary containing description and data to be rendered on discord
             return [
                 {
                     'description': item['title'],
@@ -29,7 +29,7 @@ class GoogleCommand:
         except Exception as e:
             log.exception(msg=f'error while fetching google search results {e}')
 
-            # returning list of dictionary containing description and data
+            # returning list of dictionary containing description and data to be rendered on discord
             return [
                 {
                     'description': 'Something went wrong',
