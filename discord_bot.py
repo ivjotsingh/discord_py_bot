@@ -1,6 +1,5 @@
 # python library to communicate with discord bot using discord.Client
 import discord
-from discord.ext import commands
 
 # decouple helps to fetch environment variables
 from decouple import config
