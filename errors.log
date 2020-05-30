@@ -1,0 +1,7 @@
+2020-05-31 00:58:32,678:utilities.loggers:error while fetching google search results 400 Client Error: Bad Request for url: https://www.googleapis.com/customsearch/v1?key=AIzaSyC6ON6OLpm6BHwZdvLHxGHluMA7qvv_zc0&cx=006698953400785158093:6nu5irchvpo&&q=game%20of%20thrones&&num=f5
+Traceback (most recent call last):
+  File "/Users/indianrenters/PycharmProjects/py_google/commands/google.py", line 16, in execute
+    response.raise_for_status()
+  File "/Users/indianrenters/PycharmProjects/py_google/proj-env/lib/python3.6/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://www.googleapis.com/customsearch/v1?key=AIzaSyC6ON6OLpm6BHwZdvLHxGHluMA7qvv_zc0&cx=006698953400785158093:6nu5irchvpo&&q=game%20of%20thrones&&num=f5
