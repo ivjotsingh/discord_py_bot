@@ -2,25 +2,36 @@ import json
 
 from utilities.google_search import search_query
 from utilities.mongo import post_to_mongo_db
+from utilities.loggers import logger as log
 
 
 class GoogleCommand:
     @staticmethod
     def execute(args):
-        # todo add logging and exception handling
+        try:
+            query = " ".join(args)
 
-        query = " ".join(args)
-        response = search_query(query)
-        response.raise_for_status()
+            # searching using google custom search API
+            response = search_query(query)
+            response.raise_for_status()
+            response = json.loads(json.dumps(response.json()))
 
-        response = json.loads(json.dumps(response.json()))
+            # pushing search query to mongo db as log
+            post_to_mongo_db({"query": f"{query}"})
 
-        # returning list of dictionary containing heading and content
-        post_to_mongo_db({"query": f"{query}"})
+            # returning list of dictionary containing description and data
+            return [
+                {
+                    'description': item['title'],
+                    'data': item['link']
+                }
+                for item in response['items']]
+        except Exception as e:
+            log.exception(msg=f'error while fetching google search results {e}')
 
-        return [
-            {
-                'description': item['title'],
-                'data': item['link']
-            }
-            for item in response['items']]
+            # returning list of dictionary containing description and data
+            return [
+                {
+                    'description': 'Something went wrong',
+                    'data': 'unable to fetch search results'
+                }]
