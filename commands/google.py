@@ -6,6 +6,7 @@ import json
 class GoogleCommand:
     @staticmethod
     def execute(message, args):
+        # todo add logging and exception handling
         query = " ".join(args)
 
         # using custom search Rest API of google to get top 5 results
