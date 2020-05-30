@@ -13,7 +13,7 @@ Once you joined, you'll be able to do 3 thing:
 
 Bot will reply with hey
 
-![alt text](https://ibb.co/0jPfkQb)
+![](https://ibb.co/0jPfkQb)
 
 
 2: Try google search using !google command
@@ -24,7 +24,7 @@ Type !google nodejs
 
 and results will pop up
 
-![alt text](https://ibb.co/mv9TbnC)
+![](https://ibb.co/mv9TbnC)
 
 
 3: get recent searches 
@@ -35,18 +35,18 @@ type !recent game
 
 and results will pop up
 
-![alt text](https://ibb.co/zXJBgNP)
+![](https://ibb.co/zXJBgNP)
 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-Signed up discord account
-Discord bot's token with message permissions
-Google custom search client id
-Google custom search 
-python3
+1: Signed up discord account
+2: Discord bot's token with message permissions
+3: Google custom search client id
+4: Google custom search 
+5: python3.6 +
 
 
 ### Installing
