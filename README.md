@@ -9,11 +9,15 @@ Click on the discord's invite link
 for now email me for the invitaion link.
 
 Once you joined, you'll be able to do 3 thing:
+
+
 1: send hi to the bot 
 
 Bot will reply with hey
 
 ![](https://i.ibb.co/3yt0wkZ/Screenshot-2020-05-31-at-3-22-23-AM.png)
+
+
 
 
 2: Try google search using !google command
@@ -25,6 +29,8 @@ Type !google nodejs
 and results will pop up
 
 ![](https://i.ibb.co/1srQ7Cf/Screenshot-2020-05-31-at-3-20-03-AM.png)
+
+
 
 
 3: get recent searches 
