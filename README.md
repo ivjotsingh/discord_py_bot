@@ -22,11 +22,11 @@ Bot will reply with hey
 
 2: Try google search using !google command
 
-example-> if you want to search "nodejs" 
+example-> if you want to search "game of thrones" 
 
-Type !google nodejs
+Type !google game of thrones
 
-and results will pop up
+ and top 5 results will pop up
 
 ![](https://i.ibb.co/1srQ7Cf/Screenshot-2020-05-31-at-3-20-03-AM.png)
 
@@ -39,7 +39,7 @@ example-> if you want recent searches related to game
 
 type !recent game
 
-and results will pop up
+and recent searches will pop up
 
 ![](https://i.ibb.co/D9pvFLw/Screenshot-2020-05-31-at-3-24-15-AM.png)
 
