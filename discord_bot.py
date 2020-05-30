@@ -9,6 +9,7 @@ from decouple import config
 from commands.google import GoogleCommand
 from commands.recent import RecentCommand
 
+# command factory as a factory pattern to decide which class to be used at run time
 command_factory = {
     'google': GoogleCommand,
     'recent': RecentCommand
@@ -18,7 +19,7 @@ command_factory = {
 class MyClient(discord.Client):
     async def on_ready(self):
         # confirming that bot is online
-        print('Logged on as', self.user)
+        print('Logged in as', self.user)
 
     async def on_message(self, message):
         # don't respond to ourselves
@@ -30,16 +31,27 @@ class MyClient(discord.Client):
         # simply replying hey to hi
         if content == 'hi':
             await message.channel.send('hey')
+
+        # handles commands like !google and !recent
         elif content[0] == config('PREFIX'):
+            # eliminating prefix and saving command and its arguments
             action, *args = content[1:].split(" ")
+
+            # using factory pattern to choose class for executing message
             command = command_factory.get(action, None)
+
+            # if command does not exist in dictionary
             if not command:
                 await message.channel.send('Type a valid command !google or !recent')
+
+            # since both the command require arguments
             elif not args:
                 await message.channel.send('Oops! you forgot to mention what to search')
 
+            # data fetched by executing command
             data = command.execute(message, args)
 
+            # embedding data for better display
             for element in data:
                 e = discord.Embed(heading=element['content'])
                 await message.channel.send(element['heading'], embed=e)
