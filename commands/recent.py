@@ -3,5 +3,6 @@ import requests
 
 class RecentCommand():
 
-    def execute(self, message):
+    @staticmethod
+    def execute(args):
         pass

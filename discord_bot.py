@@ -49,7 +49,7 @@ class MyClient(discord.Client):
                 await message.channel.send('Oops! you forgot to mention what to search')
 
             # data fetched by executing command
-            data = command.execute(message, args)
+            data = command.execute(args)
 
             # embedding data for better display
             for element in data:

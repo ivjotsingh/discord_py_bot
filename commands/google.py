@@ -2,10 +2,12 @@ import requests
 from decouple import config
 import json
 
+from utilities.mongo import post_to_mongo_db
+
 
 class GoogleCommand:
     @staticmethod
-    def execute(message, args):
+    def execute(args):
         # todo add logging and exception handling
         query = " ".join(args)
 
@@ -18,6 +20,8 @@ class GoogleCommand:
         response = json.loads(json.dumps(response.json()))
 
         # returning list of dictionary containing heading and content
+        post_to_mongo_db({{"query": f"{query}"}})
+
         return [
             {
                 'heading': item['heading'],
