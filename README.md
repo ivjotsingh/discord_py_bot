@@ -1,4 +1,4 @@
-# discord py bot
+# discord_py_bot
 
 Discord bot which allow google search through discord without tab switching and also fetches recent searches
 
@@ -13,7 +13,7 @@ Once you joined, you'll be able to do 3 thing:
 
 Bot will reply with hey
 
-![](https://ibb.co/0jPfkQb)
+![](https://i.ibb.co/3yt0wkZ/Screenshot-2020-05-31-at-3-22-23-AM.png)
 
 
 2: Try google search using !google command
@@ -24,7 +24,7 @@ Type !google nodejs
 
 and results will pop up
 
-![](https://ibb.co/mv9TbnC)
+![](https://i.ibb.co/1srQ7Cf/Screenshot-2020-05-31-at-3-20-03-AM.png)
 
 
 3: get recent searches 
@@ -35,7 +35,7 @@ type !recent game
 
 and results will pop up
 
-![](https://ibb.co/zXJBgNP)
+![](https://i.ibb.co/D9pvFLw/Screenshot-2020-05-31-at-3-24-15-AM.png)
 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -58,9 +58,11 @@ These instructions will get you a copy of the project up and running on your loc
 note: environment variables should be set
 ## Authors
 
-* **Ivjot Singh** - 
+* **Ivjot Singh** 
 
 
 ## Acknowledgments
 
 * https://pypi.org/project/discord.py/
+
+
