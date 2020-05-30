@@ -15,8 +15,8 @@ class RecentCommand:
             # returning list of dictionary containing description and data to be rendered on discord
             return [{
                     'description': f'Recent Searches for {query}',
-                    'data': results}
-                ]
+                    'data': results
+                    }]
 
         except Exception as e:
             log.exception(msg=f'error while fetching google search results {e}')
