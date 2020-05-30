@@ -37,7 +37,13 @@ class MyClient(discord.Client):
                 await message.channel.send('Type a valid command !google or !recent')
             elif not args:
                 await message.channel.send('Oops! you forgot to mention what to search')
-            command.execute(message, args)
+
+            data = command.execute(message, args)
+
+            for element in data:
+                e = discord.Embed(heading=element['content'])
+                await message.channel.send(element['heading'], embed=e)
+
 
 # connecting and making the bot online using MyClient class inheriting from discord.Client
 client = MyClient()
