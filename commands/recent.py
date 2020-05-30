@@ -9,6 +9,6 @@ class RecentCommand():
         results = ", ".join(fetch_from_mongo_db(query))
 
         return [{
-                'heading': f'Recent Searches for {query}',
-                'content': results}
+                'description': f'Recent Searches for {query}',
+                'data': results}
             ]

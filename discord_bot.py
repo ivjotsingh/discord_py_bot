@@ -53,8 +53,8 @@ class MyClient(discord.Client):
 
             # embedding data for better display
             for element in data:
-                e = discord.Embed(heading=element['content'])
-                await message.channel.send(element['heading'], embed=e)
+                e = discord.Embed(title=element['data'])
+                await message.channel.send(element['description'], embed=e)
 
 
 # connecting and making the bot online using MyClient class inheriting from discord.Client

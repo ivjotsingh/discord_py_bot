@@ -2,3 +2,4 @@ proj-env
 .idea*
 .env
 commands/__pycache_*
+utilities/__pycache*

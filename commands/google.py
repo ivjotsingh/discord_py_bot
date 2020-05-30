@@ -20,11 +20,11 @@ class GoogleCommand:
         response = json.loads(json.dumps(response.json()))
 
         # returning list of dictionary containing heading and content
-        post_to_mongo_db({{"query": f"{query}"}})
+        post_to_mongo_db({"query": f"{query}"})
 
         return [
             {
-                'heading': item['heading'],
-                'content': item['content']
+                'description': item['title'],
+                'data': item['link']
             }
             for item in response['items']]
