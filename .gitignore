@@ -1,0 +1,4 @@
+proj-env
+.idea*
+.env
+commands/__pycache_*
