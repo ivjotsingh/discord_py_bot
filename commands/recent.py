@@ -1,7 +1,7 @@
 from utilities.mongo import fetch_from_mongo_db
 
 
-class RecentCommand():
+class RecentCommand:
 
     @staticmethod
     def execute(args):
