@@ -1,4 +1,7 @@
 import requests
 
-class Command():
-    pass
+
+class RecentCommand():
+
+    def execute(self, message):
+        pass

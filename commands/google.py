@@ -1,5 +1,10 @@
 import requests
 
 
-class Command():
-    pass
+
+
+
+class GoogleCommand():
+
+    def execute(self, message, args):
+        pass
